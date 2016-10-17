@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 const path = require('path');
@@ -104,8 +103,7 @@ module.exports = {
       favicon: `${exampleDir}/favicon.png`
     }),
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"development"' }),
-    new webpack.HotModuleReplacementPlugin(),
-    new CaseSensitivePathsPlugin()
+    new webpack.HotModuleReplacementPlugin()
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

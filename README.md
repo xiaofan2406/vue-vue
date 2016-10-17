@@ -1,16 +1,16 @@
-# VueVue
-Using `vue` as data layer.
+### VueVue
+> Using `vue` as data layer.
 
 
-# VueVue store
-Just an instance of `Vue`.
+### VueVue store
+Just an instance of `vue`.
 
 - data as state
 - methods as actions
 - computed as selectors (getters)
 
 
-# Usage
+### Usage
 
 ```js
 // tell Vue to use VueVue plugin
@@ -18,7 +18,7 @@ Vue.use(VueVue);
 
 // create a VueVue store
 const store = VueVue.createStore({
-  counter: new Vue({
+  counterStore: new Vue({
     data() {
       return {
         count: 0
@@ -41,4 +41,13 @@ new Vue({
   store
 });
 
+
+// use the store in any component
+...
+computed: {
+  count(): {
+    return this.$store.counterStore.count;
+  }
+}
+...
 ```

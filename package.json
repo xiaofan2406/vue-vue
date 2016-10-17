@@ -1,7 +1,7 @@
 {
   "name": "vue-vue",
   "version": "0.0.2",
-  "description": "Using `vue` as data layer",
+  "description": "Using vue as data layer",
   "author": "Xiaofan Wu",
   "main": "scr/index.js",
   "keywords": [
@@ -17,7 +17,7 @@
     "url": "https://github.com/xiaofan2406/vue-vue.git"
   },
   "peerDependencies": {
-    "vue": "^2.0.2"
+    "vue": "^2.0.3"
   },
   "devDependencies": {
     "animate.css": "^3.5.2",
@@ -27,16 +27,14 @@
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-latest": "^6.16.0",
-    "case-sensitive-paths-webpack-plugin": "^1.1.4",
     "chalk": "^1.1.3",
     "css-loader": "^0.25.0",
     "eslint": "^3.7.1",
-    "eslint-config-airbnb-base": "^8.0.0",
+    "eslint-config-airbnb-base": "^9.0.0",
     "eslint-import-resolver-webpack": "^0.6.0",
-    "eslint-loader": "1.5.0",
+    "eslint-loader": "^1.6.0",
     "eslint-plugin-html": "^1.5.3",
     "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-react": "^6.4.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
@@ -55,7 +53,6 @@
   },
   "scripts": {
     "dev": "node ./config/dev",
-    "lint": "./node_modules/.bin/eslint -c .eslintrc.js .",
-    "test": "./node_modules/.bin/mocha --recursive ./test"
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src ./example"
   }
 }

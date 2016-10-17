@@ -20,14 +20,12 @@ function isValidStore(store) {
 
 
 function createStore(substores) {
-  const rootStore = {};
-  const names = Object.keys(substores);
-  for (const name of names) {
-    if (isValidStore(substores[name])) {
-      rootStore[name] = substores[name];
+  return Object.keys(substores).reduce((acc, key) => {
+    if (isValidStore(substores[key])) {
+      acc[key] = substores[key];
     }
-  }
-  return rootStore;
+    return acc;
+  }, {});
 }
 
 
