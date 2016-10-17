@@ -1,0 +1,6 @@
+config/
+example/
+scripts/
+test/
+.babelrc
+.eslintrc.js

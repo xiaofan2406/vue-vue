@@ -15,7 +15,7 @@ function install(_Vue) {
 
 function isValidStore(store) {
   // TODO disallow some properties
-  return Boolean(store.$data);
+  return store._isVue;
 }
 
 
