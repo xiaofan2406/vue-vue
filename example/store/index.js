@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import VueVue from 'src';
 
-import todoStore from './todo-store';
-import projectStore from './project-store';
+import CounterStore from './counter-store';
+import TodoStore from './todo-store';
 
 
 Vue.use(VueVue);
 
 
 export default VueVue.createStore({
-  todoStore: todoStore(),
-  projectStore: projectStore()
+  todoStore: new TodoStore(),
+  counterStore: new CounterStore()
 });
