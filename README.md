@@ -17,7 +17,7 @@ Just an instance of `Vue`.
 Vue.use(VueVue);
 
 // create a VueVue store
-const store = {
+const store = VueVue.createStore({
   counter: new Vue({
     data() {
       return {
@@ -33,7 +33,7 @@ const store = {
       }
     }
   })
-};
+});
 
 // tell root Vue instance to use the store
 new Vue({

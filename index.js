@@ -31,7 +31,7 @@ function createStore(substores) {
 }
 
 
-export default {
+module.exports = {
   createStore,
   install
 };
