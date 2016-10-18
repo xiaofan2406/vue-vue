@@ -1,6 +1,6 @@
 {
   "name": "vuevue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Using vue as data layer",
   "author": "Xiaofan Wu",
   "main": "scr/index.js",
@@ -54,6 +54,7 @@
   },
   "scripts": {
     "dev": "node ./config/dev",
-    "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src ./example"
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src ./example",
+    "preversion": "npm run lint"
   }
 }
