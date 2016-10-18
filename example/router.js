@@ -8,7 +8,7 @@ import Project from './app/Project';
 
 Vue.use(VueRouter);
 
-const routes = [
+export const routes = [
   { path: '/', component: Home },
   { path: '/todo', component: Todo },
   { path: '/todo/:filter', component: Todo },

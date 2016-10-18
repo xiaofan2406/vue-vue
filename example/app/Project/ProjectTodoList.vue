@@ -1,15 +1,10 @@
 <template>
   <div class="ProjectTodoList">
-    <ProjectTodoItem v-for="todo of project.todoStore.todos" :todo="todo"></ProjectTodoItem>
+    <ProjectTodoItem class="item" v-for="todo of todos" :todo="todo" :onRemove="removeTodo(todo.id)"></ProjectTodoItem>
   </div>
 </template>
 
 <script>
-// import { mapGetters } from 'vuex';
-// import { projectGetters } from 'store/getters';
-//
-//
-// const { ALL_PROJECTS } = projectGetters;
 import ProjectTodoItem from './ProjectTodoItem';
 
 export default {
@@ -21,15 +16,25 @@ export default {
       type: Object,
       required: true
     }
+  },
+  computed: {
+    todos() {
+      return this.project.todoStore.todos;
+    }
+  },
+  methods: {
+    removeTodo(id) {
+      const _this = this;
+      return () => {
+        _this.project.todoStore.removeTodo(id);
+      };
+    }
   }
 };
 </script>
 
-<style>
-.ProjectTodoList {
-}
-
-.ProjectTodoList-item {
+<style scoped>
+.item {
   margin-bottom: 16px;
   box-shadow: none;
   border: none;

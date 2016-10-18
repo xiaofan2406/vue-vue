@@ -16,24 +16,28 @@ Just an instance of `vue`.
 // tell Vue to use VueVue plugin
 Vue.use(VueVue);
 
+
+// define a sub-store
+class CounterStore {
+  constructor() {
+    this.count = 0;
+  }
+
+  increment() {
+    this.count++;
+  }
+
+  decrement() {
+    this.count--;
+  }
+}
+
+
 // create a VueVue store
 const store = VueVue.createStore({
-  counterStore: new Vue({
-    data() {
-      return {
-        count: 0
-      };
-    },
-    methods: {
-      plus() {
-        this.count++;
-      },
-      minus() {
-        this.count--;
-      }
-    }
-  })
+  counterStore: new CounterStore()
 });
+
 
 // tell root Vue instance to use the store
 new Vue({

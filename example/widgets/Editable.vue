@@ -8,10 +8,10 @@
     @keyup.enter="confirm"
     @keyup.esc="cancel"
     @blur="cancel"  
-    autofocus
+    :autofocus="true"
   >
   </input>
-  <Tag v-else @dblclick.native="changeRender" :tag="displayTag" :class="sharedClass">{{value}}</Tag>
+  <Tag v-else @dblclick.native="changeRenderInput" :tag="displayTag" :class="sharedClass">{{value}}</Tag>
 </template>
 
 <script>
@@ -23,7 +23,10 @@ export default {
     Tag
   },
   props: {
-    editable: Boolean,
+    editable: {
+      type: Boolean,
+      default: true
+    },
     value: String,
     inputClass: String,
     sharedClass: String,
@@ -46,10 +49,9 @@ export default {
     cancel() {
       this.renderEdit = false;
     },
-    changeRender() {
+    changeRenderInput() {
       if (this.editable) {
         this.renderEdit = true;
-        this.$refs.input.focus();
       }
     }
   }

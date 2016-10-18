@@ -1,15 +1,15 @@
 <template>
-  <div v-if="visibleTodos.length > 0" class="TodoList-root">
-    <div v-for="todo of visibleTodos" :key="todo.id" :class="['TodoList-item', {completed: todo.completed}]">
+  <div v-if="visibleTodos.length > 0" class="root">
+    <div v-for="todo of visibleTodos" :key="todo.id" :class="['item', {completed: todo.completed}]">
       <Editable 
         :editable="!todo.completed"
-        sharedClass="TodoList-item-name" 
-        inputClass="TodoList-item-input"
+        sharedClass="TodoList-itemname" 
+        inputClass="TodoList-iteminput"
         :value="todo.name" 
         displayTag="span" 
         :onConfirm="rename(todo.id)"        
       ></Editable>
-      <div class="TodoList-item-controls">
+      <div class="controls">
         <span @click="toggleTodo(todo.id)" :title="todo.completed ? 'Mark Active' : 'Mark Completed'">
           <i v-if="todo.completed" class="fa fa-history" aria-hidden="true"></i>
           <i v-else="todo.completed" class="fa fa-check" aria-hidden="true"></i>
@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <div v-else class="TodoList-empty"><p>Nothing to see here</p></div>
+  <div v-else class="empty"><p>Nothing to see here</p></div>
 </template>
 
 <script>
@@ -57,18 +57,18 @@ export default {
 </script>
 
 <style scoped>
-.TodoList-root {
+.root {
   margin-bottom: 2em;
   min-height: 356px;
 }
-.TodoList-empty {
+.empty {
   min-height: 356px;
   margin-bottom: 2em;
   display: flex;
   justify-content: center;
   align-items:  center;
 }
-.TodoList-item {
+.item {
   color: #585858;
   box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
   margin-bottom: 0.5em;
@@ -81,21 +81,23 @@ export default {
     background-color: rgba(76,175,80,.12);
   }
 }
-.TodoList-item-controls {
+.controls {
   &>span {
     cursor: pointer;
   }
 }
 </style>
 <style>
-.TodoList-item-name {
+.TodoList-itemname {
   font-size: 24px;
   padding: 0;
   border: 0;
   flex: 1;
   word-break: break-all;
+  color: #585858;
 }
-.TodoList-item-input {
-  border-bottom: 1px solid;
+.TodoList-iteminput {
+  border-bottom: 1px solid #ddd;
+  font-style: italic;
 }
 </style>

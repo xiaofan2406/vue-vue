@@ -1,8 +1,8 @@
 <template>
-  <div class="TodoSearch-root">
+  <div class="root">
     <input 
       ref="input" 
-      class="TodoSearch-input" 
+      class="input" 
       placeholder="search..." 
       type="text" 
       @input="searchTodo" 
@@ -25,10 +25,10 @@ export default {
 </script>
 
 <style scoped>
-.TodoSearch-root {
+.root {
   margin-bottom: 1em;
 }
-.TodoSearch-input {
+.input {
   width: 100%;
   font-size: 24px;
   padding: 6px;

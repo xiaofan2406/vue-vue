@@ -1,9 +1,9 @@
 <template>
-  <div class="TodoNew-root">
+  <div class="root">
     <input
       type="text"
       placeholder="add a new todo"
-      class="TodoNew-input"
+      class="input"
       @keyup.enter="addTodo"
       @keyup.esc="clearInput"
     />
@@ -31,11 +31,11 @@ export default {
 };
 </script>
 
-<style>
-.TodoNew-root {
+<style scoped>
+.root {
   margin-bottom: 1em;
 }
-.TodoNew-input {
+.input {
   width: 100%;
   font-size: 24px;
   padding: 6px;

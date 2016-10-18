@@ -1,9 +1,7 @@
 <template>
-  <div class="Project-root">
-    <div class="Project-entry">
-      <div theme="dark" mode="horizontal" class="Project-menu">
-        <input type="text" @keyup.enter="addProject" placeholder="add a new project" />  
-      </div>      
+  <div class="root">
+    <div class="entry">
+      <input type="text" class="input" @keyup.enter="addProject" placeholder="add a new project" /> 
       <ProjectList></ProjectList>
     </div>
   </div>
@@ -27,19 +25,18 @@ export default {
       e.target.value = '';
     }
   }
-
 };
 </script>
 
-<style>
-.Project-root {
+<style scoped>
+.root {
   display: flex;
   justify-content: center;
 }
-.Project-entry {
+.entry {
   width: 640px;
 }
-.Project-menu {
+.input {
   margin-bottom: 32px;
 }
 </style>

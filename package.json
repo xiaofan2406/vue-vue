@@ -1,11 +1,12 @@
 {
-  "name": "vue-vue",
+  "name": "vuevue",
   "version": "0.0.2",
   "description": "Using vue as data layer",
   "author": "Xiaofan Wu",
   "main": "scr/index.js",
   "keywords": [
     "vue",
+    "vuevue",
     "vue-vue",
     "state",
     "management",

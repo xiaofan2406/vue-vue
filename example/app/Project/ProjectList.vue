@@ -3,7 +3,7 @@
     enter-active-class="animated zoomInDown"
     leave-active-class="animated bounceOutRight"
   >
-    <ProjectSingle :project="project" v-for="project of projects" :key="project.id" class="ProjectSingle"></ProjectSingle>
+    <ProjectSingle :project="project" v-for="project of projects" :key="project.id" class="item"></ProjectSingle>
   </transition-group>
 </template>
 
@@ -23,8 +23,8 @@ export default {
 };
 </script>
 
-<style>
-.ProjectSingle {
+<style scoped>
+.item {
   margin-bottom: 16px;
 }
 </style>

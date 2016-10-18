@@ -1,5 +1,5 @@
 <template>
-  <div class="Todo-root">
+  <div class="root">
     <TodoSearch></TodoSearch>
     <TodoNew></TodoNew>
     <TodoList></TodoList>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.Todo-root {
+.root {
   width: 480px;
 }
 </style>
