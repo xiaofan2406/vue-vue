@@ -1,8 +1,8 @@
-### VueVue
+### Vue-Vue
 > Using `vue` as data layer.
 
 
-### VueVue store
+### Vue-Vue store
 Just an instance of `vue`.
 
 - data as state
