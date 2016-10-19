@@ -55,6 +55,7 @@
   "scripts": {
     "dev": "node ./config/dev",
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src ./example",
-    "preversion": "npm run lint"
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags"
   }
 }

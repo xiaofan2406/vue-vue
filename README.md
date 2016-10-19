@@ -1,19 +1,21 @@
 ### Vue-Vue
 > Using `vue` as data layer.
 
+- the root store (`this.$store`) is just an instance of vue
 
-### Vue-Vue store
-Just an instance of `vue`.
 
-- data as state
-- methods as actions
-- computed as selectors (getters)
+### Install
+```
+npm install --save vue-vue
+```
 
 
 ### Usage
 
 ```js
 // tell Vue to use VueVue plugin
+import VueVue from 'vue-vue';
+
 Vue.use(VueVue);
 
 
