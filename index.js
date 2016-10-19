@@ -1,6 +1,5 @@
 const Vue = require('vue');
 
-
 module.exports = {
   install(_Vue) {
     _Vue.mixin({

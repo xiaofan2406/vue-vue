@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueVue from 'src';
+import VueVue from 'root'; // alias to ../../index.js
 
 import CounterStore from './counter-store';
 import TodoStore from './todo-store';
