@@ -1,6 +1,6 @@
 {
   "name": "vue-vue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Using vue as data layer",
   "author": "Xiaofan Wu",
   "main": "scr/index.js",
