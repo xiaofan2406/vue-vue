@@ -1,5 +1,5 @@
 ### Vue-Vue
-> Using `vue` as data layer.
+> Simple state management helper that uses a vue instance as the data layer
 
 - the root store (`this.$store`) is just an instance of vue
 
