@@ -3,7 +3,7 @@ const ifconfig = require('os').networkInterfaces();
 function getExternalIp() {
   const devices = Object.keys(ifconfig);
 
-  for (const device of devices) {
+  for (const device of devices) { // eslint-disable-line no-restricted-syntax
     // ignore network loopback interface
     if (device.indexOf('lo') === -1) {
       const length = ifconfig[device].length;
