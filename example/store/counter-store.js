@@ -1,6 +1,6 @@
 export default class CounterStore {
-  constructor() {
-    this.count = 0;
+  constructor(init = {}) {
+    this.count = init.count || 0;
   }
 
   increment() {

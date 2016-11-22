@@ -1,7 +1,7 @@
-### Vue-Vue
-> Simple state management helper that uses a vue instance as the data layer
+# Vue-Vue
+Simple state management helper that uses a vue instance as the data layer
 
-- the root store (`this.$store`) is just an instance of vue
+> the root store (`this.$store`) is just an instance of vue
 
 
 ### Install
@@ -19,10 +19,10 @@ import VueVue from 'vue-vue';
 Vue.use(VueVue);
 
 
-// define a sub-store
+// define a module
 class CounterStore {
-  constructor() {
-    this.count = 0;
+  constructor(init = {}) {
+    this.count = init.count || 0;
   }
 
   increment() {
@@ -57,3 +57,14 @@ computed: {
 }
 ...
 ```
+
+### API
+
+##### createStore(modules, initialState = null)
+- Arguments:
+  - `{Object} modules`
+  - `{Object} initialState`, optional
+
+- Note:
+  - `modules` and `initialState` should have matching keys, unmatched will be ignored
+  - the type of a module should not matter, as long as it has a property called `constructor` and uses it for initialization

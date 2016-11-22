@@ -14,10 +14,19 @@ module.exports = {
     });
   },
 
-  createStore(substores) {
+  createStore(modules, initialState = null) {
+    if (initialState) {
+      const keys = Object.keys(initialState);
+      for (const key of keys) {
+        if (modules[key] && typeof modules[key].constructor === 'function') { // statekey matches store key
+          modules[key] = new modules[key].constructor(initialState[key]);
+        }
+      }
+    }
+
     return new Vue({
       data() {
-        return substores;
+        return modules;
       }
     });
   }

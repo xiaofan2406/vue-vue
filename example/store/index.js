@@ -13,4 +13,8 @@ export default VueVue.createStore({
   todoStore: new TodoStore(),
   counterStore: new CounterStore(),
   projectStore: new ProjectStore()
+}, { // in
+  counterStore: {
+    count: 8
+  }
 });

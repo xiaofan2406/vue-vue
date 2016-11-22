@@ -36,6 +36,7 @@ module.exports = {
     "no-underscore-dangle": 0,
     "no-param-reassign": 0, // e.target.value = ''; happens all the time
     "no-plusplus": 0, // i++ is allowed
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
     "no-unused-vars": ["error", { "argsIgnorePattern": "^h$" }], // render(h)
     "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }], // better looking arrow-funcs
     "import/extensions": [2, { "vue": "never" }],
