@@ -2,3 +2,4 @@ config/
 example/
 .babelrc
 .eslintrc.js
+yarn.lock

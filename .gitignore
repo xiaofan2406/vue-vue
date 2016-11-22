@@ -35,4 +35,3 @@ Thumbs.db
 # Node specific #
 #################
 node_modules/
-yarn.lock
