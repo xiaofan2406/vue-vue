@@ -1,6 +1,6 @@
 {
   "name": "vue-vue",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Simple state management helper that uses a vue instance as the data layer",
   "author": "Xiaofan Wu",
   "main": "index.js",
